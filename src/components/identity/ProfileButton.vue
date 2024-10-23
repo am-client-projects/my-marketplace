@@ -35,7 +35,7 @@
       >
         <MenuItem v-for="item in user_navigation" :key="item.name">
           <a
-            :href="item.target"
+            :href="`/${item.name.toLowerCase()}`"
             class="block w-full p-3 rounded-md bg-primary hover:bg-pop-secondary text-pop-secondary hover:text-primary text-sm"
           >
             <div class="flow-root">
@@ -82,13 +82,11 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useDark } from "@vueuse/core";
 import { useAuth0 } from "@auth0/auth0-vue";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { user_navigation } from "@helpers/navigation";
 import ThemeToggle from "@components/ThemeToggle.vue";
 
-const isDark = useDark();
 const auth0 = useAuth0();
 const { logout } = auth0;
 

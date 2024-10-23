@@ -12,7 +12,7 @@
               :class="item.items.length === 0 ? 'w-full' : 'w-[90%]'"
             >
               <a
-                :href="item.target"
+                :href="item.name.toLowerCase()"
                 :class="[
                   item.current
                     ? 'bg-primary text-pop-secondary'

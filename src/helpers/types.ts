@@ -41,7 +41,8 @@ export interface ISendPortalInviteRequest {
 
 export type Item = {
   name: string;
-  target: string;
+  description?: string;
+  page?: string;
   icon: string;
   current: boolean;
   roles?: AllRoles[];

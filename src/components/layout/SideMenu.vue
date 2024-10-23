@@ -6,7 +6,7 @@
       <img
         src="/logo.png"
         alt="logo"
-        class="w-36 bg-pop-secondary rounded-md"
+        class="w-36 rounded-md bg-pop-secondary/80 dark:bg-pop-secondary/60"
       />
 
       <!-- <span class="border-b border-pop-secondary text-pop-secondary ml-4">

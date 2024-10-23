@@ -1,3 +1,4 @@
+import { kebabCase } from "lodash";
 import { createRouter, createWebHistory } from "vue-router";
 import { navigation, user_navigation } from "@helpers/index";
 import { applyRoleRouteGuard } from "@auth/guards";
@@ -26,11 +27,11 @@ const static_routes = [
 ];
 
 const dynamic_routes = [];
-for (const route of navigation) {
+for (const [index, route] of navigation.entries()) {
   const routeJson = {
-    path: route.target,
+    path: `/${kebabCase(route.name)}`,
     name: route.name,
-    component: () => import(`@views/${route.name.replace(" ", "")}.vue`),
+    component: () => import(`@views/${route.page}.vue`),
     meta: {
       redirect: "/not-allowed",
       roles: route.roles,
@@ -42,7 +43,7 @@ for (const route of navigation) {
 
 for (const route of user_navigation) {
   const routeJson = {
-    path: route.target,
+    path: `/${route.name.toLowerCase()}`,
     name: route.name,
     component: () => import(`@views/${route.name.replace(" ", "")}.vue`),
     beforeEnter: [authGuard],

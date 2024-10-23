@@ -1,6 +1,9 @@
 <template>
   <button
-    class="bg-pop-primary text-primary hover:text-pop-secondary text-2xl hover:border-transparent rounded-2xl w-40 h-16"
+    class="text-2xl rounded-xl w-40 h-16 hover:border-transparent 
+    bg-pop-primary/80 dark:bg-pop-secondary/60
+    text-white hover:text-pop-secondary
+    dark:hover:text-primary"
     @click="handleLogin"
   >
     Log In
@@ -8,14 +11,17 @@
 </template>
 
 <script setup lang="ts">
+import { kebabCase } from "lodash";
 import { useAuth0 } from "@auth0/auth0-vue";
+import { navigation } from "@helpers/index";
 
 const { loginWithRedirect } = useAuth0();
+const home_page = navigation.find((n) => n.page === "Page1");
 
 const handleLogin = () => {
   loginWithRedirect({
     appState: {
-      target: "/dashboard",
+      target: `/${kebabCase(home_page.name)}`,
     },
     authorizationParams: {
       prompt: "login",

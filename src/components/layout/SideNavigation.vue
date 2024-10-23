@@ -4,8 +4,8 @@
   <nav class="flex flex-1 flex-col">
     <ul role="list" class="flex flex-1 flex-col gap-y-4">
       <li
-        v-for="item in items"
-        :key="item.name"
+        v-for="(item, index) in items"
+        :key="index"
         :class="item.roles.includes(AllRoles.SUPER_ADMIN) ? 'mt-auto mb-8' : ''"
       >
         <div
@@ -17,7 +17,9 @@
           ]"
         >
           <a
-            :href="userHasAnyRoles(item.roles) ? item.target : ''"
+            :href="
+              userHasAnyRoles(item.roles) ? `/${kebabCase(item.name)}` : ''
+            "
             :class="[
               item.current
                 ? 'bg-primary text-pop-secondary'
@@ -44,6 +46,7 @@
 </template>
 
 <script setup lang="ts">
+import { kebabCase } from "lodash";
 import { Item, AllRoles } from "@helpers/index";
 import { userHasAnyRoles } from "@auth/index";
 

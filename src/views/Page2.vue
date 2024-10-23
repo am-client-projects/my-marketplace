@@ -1,9 +1,7 @@
 <template>
   <PageLayout>
-    <template #pageTitle> Integrations </template>
-    <template #description>
-      Connect 3rd Party services to LAZER.io to enrich your user data</template
-    >
+    <template #pageTitle> {{ page.name }} </template>
+    <template #description> {{ page.description }} </template>
 
     <!-- Tabs -->
     <template #tabs>
@@ -12,7 +10,7 @@
         <select
           id="selected-tab"
           name="selected-tab"
-          class="mt-1 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-pop-secondary ring-1 ring-inset ring-secondary focus:ring-2 focus:ring-inset focus:ring-pop-primary sm:text-sm sm:leading-6"
+          class="mt-1 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-pop-secondary ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-pop-primary sm:text-sm sm:leading-6"
         >
           <option v-for="tab in tabs" :key="tab.name" :selected="tab.current">
             {{ tab.name }}
@@ -54,7 +52,7 @@
           <input
             id="search-field"
             class="block h-full w-full pl-10 text-pop-secondary placeholder:text-pop-secondary focus:ring-0 sm:text-sm bg-primary border-2 border-secondary rounded-md"
-            placeholder="search integrations ..."
+            placeholder="search team ..."
             type="search"
             name="search"
           />
@@ -65,24 +63,30 @@
     <!-- End Search  -->
 
     <template #pageContent>
-      <Overview v-if="current_tab === 'Overview'" />
-      <Featured v-else-if="current_tab === 'Featured'" />
-      <Popular v-else-if="current_tab === 'Popular'" />
-      <New v-else-if="current_tab === 'New'" />
+      <div v-for="tab in tabs">
+        <KeepAlive>
+          <component
+            v-if="current_tab === tab.name"
+            :title="tab.name"
+            :is="
+              defineAsyncComponent(
+                () => import(`@components/page2/${tab.page}.vue`),
+              )
+            "
+          />
+        </KeepAlive>
+      </div>
     </template>
   </PageLayout>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import { navigation } from "@helpers/navigation";
-
 import PageLayout from "@components/layout/PageLayout.vue";
-import Overview from "@components/integrations/Overview.vue";
-import Featured from "@components/integrations/Featured.vue";
-import Popular from "@components/integrations/Popular.vue";
-import New from "@components/integrations/New.vue";
 
-const tabs = navigation.find((n) => n.name === "Integrations").items;
-const current_tab = ref(tabs.find((t) => t.current === true).name);
+const page = navigation.find((n) => n.page === "Page2");
+const tabs = page.items;
+const tab = page.items.find((t) => t.current === true);
+const current_tab = ref(tab.name);
 </script>
