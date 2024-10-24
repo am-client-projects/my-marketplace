@@ -4,9 +4,48 @@
   <nav class="flex flex-1 flex-col">
     <ul role="list" class="flex flex-1 flex-col gap-y-4">
       <li
-        v-for="(item, index) in items"
+        v-for="(item, index) in primary_items"
         :key="index"
-        :class="item.roles.includes(AllRoles.SUPER_ADMIN) ? 'mt-auto mb-8' : ''"
+      > 
+        <div
+          :class="[
+            userHasAnyRoles(item.roles)
+              ? 'cursor-pointer'
+              : 'cursor-not-allowed',
+            'w-full rounded-md',
+          ]"
+        >
+          <a
+            :href="
+              userHasAnyRoles(item.roles) ? `/${kebabCase(item.name)}` : ''
+            "
+            :class="[
+              item.current
+                ? 'bg-primary text-pop-secondary'
+                : 'text-pop-secondary hover:bg-pop-secondary hover:text-primary',
+              userHasAnyRoles(item.roles)
+                ? ''
+                : 'pointer-events-none text-secondary',
+              'group flex gap-x-3 rounded-md py-2 text-base leading-6',
+            ]"
+          >
+            <div class="flex group">
+              <i
+                :class="item.icon"
+                class="text-lg mx-2 w-10 shring-0"
+                aria-hidden="true"
+              ></i>
+              {{ item.name }}
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <ul role="list" class="mt-auto mb-10 flex flex-col gap-y-4 ">
+         <li
+        v-for="(item, index) in secondary_items"
+        :key="index"
       >
         <div
           :class="[
@@ -42,6 +81,7 @@
         </div>
       </li>
     </ul>
+ 
   </nav>
 </template>
 
@@ -50,8 +90,9 @@ import { kebabCase } from "lodash";
 import { Item, AllRoles } from "@helpers/index";
 import { userHasAnyRoles } from "@auth/index";
 
-const { items } = defineProps<{
+const { primary_items, secondary_items } = defineProps<{
   level: number;
-  items: Item[];
+  primary_items: Item[];
+  secondary_items: Item[];
 }>();
 </script>

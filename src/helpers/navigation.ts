@@ -1,11 +1,11 @@
-import { Item, AllRoles } from "@helpers/index";
+import { Item, AllRoles, NavType } from "@helpers/index";
 
-export const navigation: Item[] = [
+export const primary_navigation: Item[] = [
   {
     page: "Page1",
     name: "User Management",
     description: "Manage users, check their roles and connections",
-    icon: "fa-solid fa-users",
+    icon: "fa-solid fa-user-group",
     current: false,
     roles: [AllRoles.NAVIGATOR],
     items: [
@@ -62,8 +62,249 @@ export const navigation: Item[] = [
   },
   {
     page: "Page2",
+    name: "Navigator Management",
+    description: "Manage navigators, check their expertise and client list",
+    icon: "fa-solid fa-user-shield", // user-gear, user-secret
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Roles",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Groups",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Api Keys",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Policies",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab6",
+        name: "Activity Logs",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab7",
+        name: "Invite",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+  {
+    page: "Page3",
+    name: "Community Management",
+    description: "Manage your community, find people to chat with or mentor",
+    icon: "fa-solid fa-users", // users-rectangle
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Roles",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Groups",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Api Keys",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Policies",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab6",
+        name: "Activity Logs",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab7",
+        name: "Invite",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+  {
+    page: "Page4",
+    name: "Events Management",
+    description: "Manage events, schedule and invite people",
+    icon: "fa-solid fa-calendar-plus",
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Roles",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Groups",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Api Keys",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Policies",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab6",
+        name: "Activity Logs",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab7",
+        name: "Invite",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+  {
+    page: "Page5",
+    name: "Category Management",
+    description: "Manage users, check their roles and connections",
+    icon: "fa-solid fa-server",
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Roles",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Groups",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Api Keys",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Policies",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab6",
+        name: "Activity Logs",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab7",
+        name: "Invite",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+];
+
+export const secondary_navigation = [
+  {
+    page: "Page6",
+    type: NavType.SECONDARY,
     name: "Booking & Scheduling",
-    icon: "fa-solid fa-chart-line", // chart-line, chart-pie, chart-area
+    description: "Manage users, check their roles and connections",
+    icon: "fa-solid fa-calendar-check", 
     current: false,
     roles: [AllRoles.NAVIGATOR],
     items: [
@@ -104,31 +345,205 @@ export const navigation: Item[] = [
       },
     ],
   },
-
-  // {
-  //   name: "Tenants",
-  //   icon: "fa-solid fa-house-user", // house-user, building-user, users-gear, users-rectangle, users-viewfinder, users-between-line
-  //   current: false,
-  //   roles: [AllRoles.SUPER_ADMIN],
-  //   items: [
-  //     { name: "Overview", current: true, icon: "", items: [] },
-  //     { name: "Onboard", current: true, icon: "", items: [] },
-  //   ],
-  // },
-  // {
-  //   name: "Calendar",
-  //   icon: "fa-regular fa-calendar", // https://fontawesome.com/search?q=calendar&o=a&m=free
-  //   current: false,
-  //   items: [
-  //     {
-  //       name: "Team 1",
-  //       icon: "fa-solid fa-chart-line",
-  //       current: true,
-  //       items: [],
-  //     },
-  //   ],
-  // },
-];
+  {
+    page: "Page7",
+    type: NavType.SECONDARY,
+    name: "Support Hub",
+    description: "Manage users, check their roles and connections",
+    icon: "fa-solid fa-headphones-simple", 
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Model",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Training",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Inference",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Evaluation",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+  {
+    page: "Page8",
+    type: NavType.SECONDARY,
+    name: "Billing and Payments",
+    description: "Manage users, check their roles and connections",
+    icon: "fa-solid fa-circle-dollar-to-slot", // regular fa-money-bill-1, solid: money-check-dollar, dollar-sign, hand-holdinig-dollar
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Model",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Training",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Inference",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Evaluation",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+  {
+    page: "Page9",
+    type: NavType.SECONDARY,
+    name: "Subscription History",
+    description: "Manage users, check their roles and connections",
+    icon: "fa-solid fa-money-bill-trend-up", 
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Model",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Training",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Inference",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Evaluation",
+        current: false,
+        icon: "",
+        items: [],
+      },
+  
+    ],
+  },
+  {
+    page: "Page10",
+    name: "Reported Users",
+    description: "Manage navigators, check their expertise and client list",
+    icon: "fa-solid fa-user-slash", // user-xmark, user-minus, user-lock, user-slash
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab2",
+        name: "Roles",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab3",
+        name: "Groups",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Api Keys",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab5",
+        name: "Policies",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab6",
+        name: "Activity Logs",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab7",
+        name: "Invite",
+        current: false,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+]
 
 export const user_navigation = [
   {

@@ -13,10 +13,10 @@
 <script setup lang="ts">
 import { kebabCase } from "lodash";
 import { useAuth0 } from "@auth0/auth0-vue";
-import { navigation } from "@helpers/index";
+import { primary_navigation } from "@helpers/index";
 
 const { loginWithRedirect } = useAuth0();
-const home_page = navigation.find((n) => n.page === "Page1");
+const home_page = primary_navigation.find((n) => n.page === "Page1");
 
 const handleLogin = () => {
   loginWithRedirect({

@@ -1,3 +1,8 @@
+export enum NavType {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary'
+}
+
 export enum Permissions {
   READ = "read",
   WRITE = "write",
@@ -39,10 +44,11 @@ export interface ISendPortalInviteRequest {
   auth0_org_id: string;
 }
 
-export type Item = {
+export interface Item {
   name: string;
   description?: string;
   page?: string;
+  type?: NavType;
   icon: string;
   current: boolean;
   roles?: AllRoles[];

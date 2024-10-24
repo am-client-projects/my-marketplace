@@ -14,11 +14,11 @@
       </span> -->
     </div>
 
-    <SideNavigation :level="1" :items="navigation" />
+    <SideNavigation :level="1" :primary_items="primary_navigation" :secondary_items="secondary_navigation" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { navigation } from "@helpers/navigation";
+import { primary_navigation, secondary_navigation } from "@helpers/navigation";
 import SideNavigation from "./SideNavigation.vue";
 </script>

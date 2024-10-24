@@ -1,6 +1,6 @@
 import { kebabCase } from "lodash";
 import { createRouter, createWebHistory } from "vue-router";
-import { navigation, user_navigation } from "@helpers/index";
+import { primary_navigation, secondary_navigation, user_navigation } from "@helpers/index";
 import { applyRoleRouteGuard } from "@auth/guards";
 import { authGuard } from "@auth0/auth0-vue";
 
@@ -27,7 +27,8 @@ const static_routes = [
 ];
 
 const dynamic_routes = [];
-for (const [index, route] of navigation.entries()) {
+for (const [index, route] of [...primary_navigation, ...secondary_navigation].entries()) {
+  // console.log({ index, route})
   const routeJson = {
     path: `/${kebabCase(route.name)}`,
     name: route.name,
@@ -40,6 +41,7 @@ for (const [index, route] of navigation.entries()) {
   };
   dynamic_routes.push(routeJson);
 }
+
 
 for (const route of user_navigation) {
   const routeJson = {
