@@ -1,7 +1,10 @@
 <template>
   <div v-if="!isAuthenticated" class="flex flex-col h-fit items-center">
-    <img src="/landing.png" alt="logo" class="mt-[25%] mb-10 w-2/3 rounded-xl 
-    bg-pop-primary/80 dark:bg-pop-secondary/50" />
+    <img
+      src="/landing.png"
+      alt="logo"
+      class="mt-[25%] mb-10 w-2/3 rounded-xl bg-pop-primary/80 dark:bg-pop-secondary/50"
+    />
     <LoginButton />
 
     <div class="my-10">

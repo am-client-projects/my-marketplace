@@ -52,7 +52,7 @@
           <input
             id="search-field"
             class="block h-full w-full pl-10 text-pop-secondary placeholder:text-pop-secondary focus:ring-0 sm:text-sm bg-primary border-2 border-secondary rounded-md"
-            placeholder="search team ..."
+            placeholder="search user ..."
             type="search"
             name="search"
           />

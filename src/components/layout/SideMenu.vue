@@ -14,7 +14,11 @@
       </span> -->
     </div>
 
-    <SideNavigation :level="1" :primary_items="primary_navigation" :secondary_items="secondary_navigation" />
+    <SideNavigation
+      :level="1"
+      :primary_items="primary_navigation"
+      :secondary_items="secondary_navigation"
+    />
   </div>
 </template>
 

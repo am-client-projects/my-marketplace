@@ -70,7 +70,7 @@
             :title="tab.name"
             :is="
               defineAsyncComponent(
-                () => import(`@components/page2/${tab.page}.vue`),
+                () => import(`@components/page7/${tab.page}.vue`),
               )
             "
           />
@@ -82,10 +82,10 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent, ref } from "vue";
-import { secondary_navigation } from "@helpers/navigation";
+import { primary_navigation } from "@helpers/navigation";
 import PageLayout from "@components/layout/PageLayout.vue";
 
-const page = secondary_navigation.find((n) => n.page === "Page7");
+const page = primary_navigation.find((n) => n.page === "Page7");
 const tabs = page.items;
 const tab = page.items.find((t) => t.current === true);
 const current_tab = ref(tab.name);

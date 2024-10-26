@@ -70,7 +70,7 @@
             :title="tab.name"
             :is="
               defineAsyncComponent(
-                () => import(`@components/page2/${tab.page}.vue`),
+                () => import(`@components/page5/${tab.page}.vue`),
               )
             "
           />

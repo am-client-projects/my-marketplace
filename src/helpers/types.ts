@@ -1,6 +1,6 @@
 export enum NavType {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary'
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
 }
 
 export enum Permissions {
@@ -53,4 +53,4 @@ export interface Item {
   current: boolean;
   roles?: AllRoles[];
   items: Item[];
-};
+}

@@ -3,10 +3,7 @@
 
   <nav class="flex flex-1 flex-col">
     <ul role="list" class="flex flex-1 flex-col gap-y-4">
-      <li
-        v-for="(item, index) in primary_items"
-        :key="index"
-      > 
+      <li v-for="(item, index) in primary_items" :key="index">
         <div
           :class="[
             userHasAnyRoles(item.roles)
@@ -42,11 +39,8 @@
       </li>
     </ul>
 
-    <ul role="list" class="mt-auto mb-10 flex flex-col gap-y-4 ">
-         <li
-        v-for="(item, index) in secondary_items"
-        :key="index"
-      >
+    <ul role="list" class="mt-auto mb-10 flex flex-col gap-y-4">
+      <li v-for="(item, index) in secondary_items" :key="index">
         <div
           :class="[
             userHasAnyRoles(item.roles)
@@ -81,7 +75,6 @@
         </div>
       </li>
     </ul>
- 
   </nav>
 </template>
 

@@ -18,11 +18,25 @@ export const primary_navigation: Item[] = [
       },
       {
         page: "Tab2",
-        name: "Roles",
+        name: "Removed Users",
         current: false,
         icon: "",
         items: [],
-      },  
+      },
+      {
+        page: "Tab3",
+        name: "Archived Users",
+        current: false,
+        icon: "",
+        items: [],
+      },
+      {
+        page: "Tab4",
+        name: "Add New",
+        current: false,
+        icon: "",
+        items: [],
+      },
     ],
   },
   {
@@ -149,15 +163,11 @@ export const primary_navigation: Item[] = [
       },
     ],
   },
-];
-
-export const secondary_navigation = [
   {
     page: "Page6",
-    type: NavType.SECONDARY,
     name: "Booking & Scheduling",
     description: "Manage users, check their roles and connections",
-    icon: "fa-solid fa-calendar-check", 
+    icon: "fa-solid fa-calendar-check",
     current: false,
     roles: [AllRoles.NAVIGATOR],
     items: [
@@ -179,10 +189,30 @@ export const secondary_navigation = [
   },
   {
     page: "Page7",
+    name: "Billing & Payments",
+    description: "Manage users, check their roles and connections",
+    icon: "fa-solid fa-circle-dollar-to-slot", // regular fa-money-bill-1, solid: money-check-dollar, dollar-sign, hand-holdinig-dollar
+    current: false,
+    roles: [AllRoles.NAVIGATOR],
+    items: [
+      {
+        page: "Tab1",
+        name: "Overview",
+        current: true,
+        icon: "",
+        items: [],
+      },
+    ],
+  },
+];
+
+export const secondary_navigation = [
+  {
+    page: "Page8",
     type: NavType.SECONDARY,
     name: "Support Hub",
     description: "Manage users, check their roles and connections",
-    icon: "fa-solid fa-headphones-simple", 
+    icon: "fa-solid fa-headphones-simple",
     current: false,
     roles: [AllRoles.NAVIGATOR],
     items: [
@@ -210,29 +240,11 @@ export const secondary_navigation = [
     ],
   },
   {
-    page: "Page8",
-    type: NavType.SECONDARY,
-    name: "Billing and Payments",
-    description: "Manage users, check their roles and connections",
-    icon: "fa-solid fa-circle-dollar-to-slot", // regular fa-money-bill-1, solid: money-check-dollar, dollar-sign, hand-holdinig-dollar
-    current: false,
-    roles: [AllRoles.NAVIGATOR],
-    items: [
-      {
-        page: "Tab1",
-        name: "Overview",
-        current: true,
-        icon: "",
-        items: [],
-      },
-    ],
-  },
-  {
     page: "Page9",
     type: NavType.SECONDARY,
     name: "Subscription History",
     description: "Manage users, check their roles and connections",
-    icon: "fa-solid fa-money-bill-trend-up", 
+    icon: "fa-solid fa-money-bill-trend-up",
     current: false,
     roles: [AllRoles.NAVIGATOR],
     items: [
@@ -264,7 +276,6 @@ export const secondary_navigation = [
         icon: "",
         items: [],
       },
-  
     ],
   },
   {
@@ -284,7 +295,7 @@ export const secondary_navigation = [
       },
     ],
   },
-]
+];
 
 export const user_navigation = [
   {

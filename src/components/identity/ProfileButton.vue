@@ -82,11 +82,13 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { useDark } from "@vueuse/core";
 import { useAuth0 } from "@auth0/auth0-vue";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { user_navigation } from "@helpers/navigation";
 import ThemeToggle from "@components/ThemeToggle.vue";
 
+const isDark = useDark(); // DO NOT DELETE THIS
 const auth0 = useAuth0();
 const { logout } = auth0;
 
