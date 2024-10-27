@@ -78,7 +78,7 @@
               <div>
                 <button
                   type="submit"
-                  class="flex w-full justify-center rounded-md bg-pop-primary/40 px-2.5 py-2.5 text-sm font-semibold text-pop-secondary shadow-sm ring-1 ring-inset ring-secondary hover:bg-pop-primary/80 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-pop-primary/40"
+                  class="flex w-full justify-center rounded-md px-2.5 py-2.5 text-sm font-semibold shadow-sm ring-1 ring-inset ring-secondary bg-pop-primary/70 hover:bg-pop-primary text-primary hover:text-pop-secondary disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-pop-primary/40"
                 >
                   Send Invite
                 </button>
