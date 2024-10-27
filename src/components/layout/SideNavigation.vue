@@ -45,7 +45,7 @@
           :class="[
             userHasAnyRoles(item.roles)
               ? 'cursor-pointer'
-              : 'cursor-not-allowed',
+              : 'cursor-not-allowed hidden',
             'w-full rounded-md my-2',
           ]"
         >
