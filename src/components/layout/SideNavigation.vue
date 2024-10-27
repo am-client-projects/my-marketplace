@@ -2,14 +2,14 @@
   <!-- https://iriscompanyio.medium.com/how-to-build-recursive-side-navbar-menu-component-with-vue-3-e87878fb94b6 -->
 
   <nav class="flex flex-1 flex-col">
-    <ul role="list" class="flex flex-1 flex-col gap-y-4">
+    <ul role="list" class="flex flex-col mt-2">
       <li v-for="(item, index) in primary_items" :key="index">
         <div
           :class="[
             userHasAnyRoles(item.roles)
               ? 'cursor-pointer'
-              : 'cursor-not-allowed',
-            'w-full rounded-md',
+              : 'cursor-not-allowed hidden',
+            'w-full rounded-md my-2',
           ]"
         >
           <a
@@ -29,7 +29,7 @@
             <div class="flex group">
               <i
                 :class="item.icon"
-                class="text-lg mx-2 w-10 shring-0"
+                class="text-lg mx-2 w-10 shrink-0"
                 aria-hidden="true"
               ></i>
               {{ item.name }}
@@ -39,14 +39,14 @@
       </li>
     </ul>
 
-    <ul role="list" class="mt-auto mb-10 flex flex-col gap-y-4">
+    <ul role="list" class="flex flex-col mt-auto mb-10">
       <li v-for="(item, index) in secondary_items" :key="index">
         <div
           :class="[
             userHasAnyRoles(item.roles)
               ? 'cursor-pointer'
               : 'cursor-not-allowed',
-            'w-full rounded-md',
+            'w-full rounded-md my-2',
           ]"
         >
           <a
@@ -66,7 +66,7 @@
             <div class="flex group">
               <i
                 :class="item.icon"
-                class="text-lg mx-2 w-10 shring-0"
+                class="text-lg mx-2 w-10 shrink-0"
                 aria-hidden="true"
               ></i>
               {{ item.name }}

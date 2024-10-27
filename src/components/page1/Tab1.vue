@@ -6,9 +6,9 @@
         <div
           v-for="item in stats"
           :key="item.name"
-          class="overflow-hidden rounded-lg bg-pop-secondary/80 px-4 py-5 shadow sm:p-6"
+          class="overflow-hidden rounded-lg bg-pop-secondary/60 px-4 py-5 shadow sm:p-6"
         >
-          <dt class="truncate text-sm font-medium text-pop-primary">
+          <dt class="truncate text-sm font-medium text-pop-secondary">
             {{ item.name }}
           </dt>
           <dd class="mt-1 text-3xl font-semibold tracking-tight text-primary">

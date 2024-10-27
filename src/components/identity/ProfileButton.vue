@@ -42,7 +42,7 @@
               <p class="float-left">
                 <i
                   :class="item.icon"
-                  class="text-lg mx-1 shring-0"
+                  class="text-lg mx-1 shrink-0"
                   aria-hidden="true"
                 ></i>
               </p>

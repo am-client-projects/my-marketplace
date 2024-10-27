@@ -23,7 +23,7 @@
                 <div class="flex group">
                   <i
                     :class="item.icon"
-                    class="text-lg mx-3 shring-0"
+                    class="text-lg mx-3 shrink-0"
                     aria-hidden="true"
                   ></i>
 
