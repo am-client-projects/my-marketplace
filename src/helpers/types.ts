@@ -41,7 +41,6 @@ export interface ICreateUser {
 export interface ISendPortalInviteRequest {
   email: string;
   client_id: string;
-  auth0_org_id: string;
 }
 
 export interface Item {
