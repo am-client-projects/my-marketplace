@@ -29,15 +29,14 @@ import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useAuth0 } from "@auth0/auth0-vue";
 import { AllRoles } from "@helpers/types";
-import { userHasAllRoles, userHasAnyRoles } from "@auth/index";
+import { userHasAnyRoles } from "@auth/index";
 
 const { isAuthenticated, logout } = useAuth0();
 
 const router = useRouter();
 onMounted(() => {
-  const condition =
-    !userHasAllRoles([AllRoles.NAVIGATOR, AllRoles.PROFESSIONAL]) &&
-    userHasAnyRoles([AllRoles.CLIENT]);
+  const condition = userHasAnyRoles([...Object.values(AllRoles)]);
+  console.log(condition);
   if (condition) {
     router.push("/profile");
   }
