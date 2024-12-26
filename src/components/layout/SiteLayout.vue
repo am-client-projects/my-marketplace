@@ -31,9 +31,9 @@
 
 <script setup lang="ts">
 import { useAuth0 } from "@auth0/auth0-vue";
-import SideMenu from "./SideMenu.vue";
-import TopMenu from "./TopMenu.vue";
-import Footer from "./Footer.vue";
+import SideMenu from "@/components/layout/SideMenu.vue";
+import TopMenu from "@/components/layout/TopMenu.vue";
+import Footer from "@/components/layout/Footer.vue";
 
 const { isLoading, isAuthenticated } = useAuth0();
 </script>

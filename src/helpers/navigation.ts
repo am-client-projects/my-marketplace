@@ -1,4 +1,4 @@
-import { Item, AllRoles, NavType } from "@helpers/index";
+import { Item, AllRoles, NavType } from "@/helpers";
 
 export const primary_navigation: Item[] = [
   {

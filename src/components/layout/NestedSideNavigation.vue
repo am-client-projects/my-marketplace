@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { Item } from "@helpers/index";
+import { Item } from "@/helpers/index";
 import RecursiveSidebar from "./SideNavigation.vue";
 
 const { items } = defineProps<{

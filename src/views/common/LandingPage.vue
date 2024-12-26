@@ -15,8 +15,8 @@
 
 <script setup lang="ts">
 import { useAuth0 } from "@auth0/auth0-vue";
-import LoginButton from "@components/identity/LoginButton.vue";
-import ThemeToggle from "@components/ThemeToggle.vue";
+import LoginButton from "@/components/identity/LoginButton.vue";
+import ThemeToggle from "@/components/ThemeToggle.vue";
 
 const { isAuthenticated } = useAuth0();
 </script>

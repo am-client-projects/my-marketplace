@@ -80,8 +80,8 @@
 
 <script setup lang="ts">
 import { kebabCase } from "lodash";
-import { Item, AllRoles } from "@helpers/index";
-import { userHasAnyRoles } from "@auth/index";
+import { Item, AllRoles } from "@/helpers/index";
+import { userHasAnyRoles } from "@/helpers/auth/index";
 
 const { primary_items, secondary_items } = defineProps<{
   level: number;

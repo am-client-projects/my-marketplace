@@ -6,12 +6,15 @@
       <img
         src="/logo.png"
         alt="logo"
-        class="w-36 rounded-md bg-pop-secondary/80 dark:bg-pop-secondary/60"
+        class="h-16 rounded-md bg-pop-secondary/80 dark:bg-pop-secondary/60"
       />
 
-      <!-- <span class="border-b border-pop-secondary text-pop-secondary ml-4">
-        We Are SAM
-      </span> -->
+      <span
+        class="border-b border-pop-secondary text-pop-secondary mt-2 ml-4 italic"
+      >
+        The
+        <p>Marketplace</p>
+      </span>
     </div>
 
     <SideNavigation
@@ -23,6 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import { primary_navigation, secondary_navigation } from "@helpers/navigation";
-import SideNavigation from "./SideNavigation.vue";
+import { primary_navigation, secondary_navigation } from "@/helpers/navigation";
+import SideNavigation from "@/components/layout/SideNavigation.vue";
 </script>

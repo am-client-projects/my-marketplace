@@ -1,4 +1,4 @@
-import { AllRoles } from "@helpers/index";
+import { AllRoles } from "@/helpers";
 import { getRoles } from ".";
 
 export const userHasAllRoles = (all_required_roles: AllRoles[]) => {

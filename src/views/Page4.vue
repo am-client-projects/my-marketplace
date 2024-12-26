@@ -82,8 +82,8 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent, ref } from "vue";
-import { primary_navigation } from "@helpers/navigation";
-import PageLayout from "@components/layout/PageLayout.vue";
+import { primary_navigation } from "@/helpers/navigation";
+import PageLayout from "@/components/layout/PageLayout.vue";
 
 const page = primary_navigation.find((n) => n.page === "Page4");
 const tabs = page.items;

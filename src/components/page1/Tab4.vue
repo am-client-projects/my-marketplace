@@ -95,10 +95,10 @@
 import { ref } from "vue";
 import { useAuth0 } from "@auth0/auth0-vue";
 
-import PageDivisionLayout from "@components/layout/PageDivisionLayout.vue";
-import BaseSelectForEnums from "@components/BaseSelectForEnums.vue";
-import { UserRequests } from "@auth/auth0.gateway";
-import { ICreateUser, GeneralRoles } from "@helpers/types";
+import PageDivisionLayout from "@/components/layout/PageDivisionLayout.vue";
+import BaseSelectForEnums from "@/components/BaseSelectForEnums.vue";
+import { UserRequests } from "@/helpers/auth/auth0.gateway";
+import { ICreateUser, GeneralRoles } from "@/helpers/types";
 
 const { user } = useAuth0();
 defineProps<{

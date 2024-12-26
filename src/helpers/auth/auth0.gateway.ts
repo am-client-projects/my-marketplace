@@ -1,12 +1,12 @@
+import CONFIG from "@/helpers/config";
 import {
+  getRoleId,
   ICreateUser,
-  ISendPortalInviteRequest,
-  AllRoles,
   RoleIds,
-} from "@helpers/types";
-import CONFIG from "@helpers/config";
-import { callExternalApi } from "../axios/external-api.service";
-import { getRoleId } from "@helpers/utils";
+  AllRoles,
+  ISendPortalInviteRequest,
+} from "@/helpers";
+import { useExternalApi } from "@/composables/useExternalApi";
 
 const {
   AUTH0_DOMAIN,
@@ -37,7 +37,7 @@ export class MgntRequests {
       data: body,
     };
 
-    const { data, error } = await callExternalApi({ config });
+    const { data, error } = await useExternalApi({ config });
     return data?.access_token;
   };
 }
@@ -104,7 +104,7 @@ export class UserRequests {
       data: { ...user, connection: "email", email_verified: false },
     };
 
-    const { data, error } = await callExternalApi({ config });
+    const { data, error } = await useExternalApi({ config });
 
     return {
       data,
@@ -135,7 +135,7 @@ export class UserRequests {
       data: { roles },
     };
 
-    const { data, error } = await callExternalApi({ config });
+    const { data, error } = await useExternalApi({ config });
 
     return {
       data,
@@ -149,11 +149,12 @@ export class UserRequests {
     access_token?: string,
   ) => {
     const { email, client_id } = body;
+    const auth0_org_id = "";
 
     // type: Auth0OrgInvitationRequestDto
     const invitation_request = {
       inviter: {
-        name: "We Are SAM",
+        name: "My Marketplace App",
       },
       invitee: {
         email,
@@ -174,7 +175,7 @@ export class UserRequests {
       data: invitation_request,
     };
 
-    const { data, error } = await callExternalApi({ config });
+    const { data, error } = await useExternalApi({ config });
 
     return {
       data,
@@ -196,7 +197,7 @@ export class UserRequests {
       },
     };
 
-    const { data, error } = await callExternalApi({ config });
+    const { data, error } = await useExternalApi({ config });
 
     return {
       data,
@@ -218,7 +219,7 @@ export class UserRequests {
       },
     };
 
-    const { data, error } = await callExternalApi({ config });
+    const { data, error } = await useExternalApi({ config });
 
     return {
       data,

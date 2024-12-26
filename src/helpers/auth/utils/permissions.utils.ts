@@ -1,5 +1,5 @@
 import { getPermissions } from "./token.utils";
-import { Permissions } from "@helpers/index";
+import { Permissions } from "@/helpers";
 
 export const userHasAllPermissions = (
   all_required_permissions: Permissions[],

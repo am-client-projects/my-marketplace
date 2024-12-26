@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { useAuth0 } from "@auth0/auth0-vue";
-import PageDivisionLayout from "@components/layout/PageDivisionLayout.vue";
+import PageDivisionLayout from "@/components/layout/PageDivisionLayout.vue";
 
 const { user, isLoading } = useAuth0();
 </script>
