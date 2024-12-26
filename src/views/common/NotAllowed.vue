@@ -28,8 +28,7 @@
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useAuth0 } from "@auth0/auth0-vue";
-import { AllRoles } from "@/helpers/types";
-import { userHasAnyRoles } from "@/helpers/auth/index";
+import { AllRoles, userHasAnyRoles } from "@/helpers";
 
 const { isAuthenticated, logout } = useAuth0();
 

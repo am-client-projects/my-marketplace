@@ -3,7 +3,7 @@
     <img
       src="/landing.png"
       alt="logo"
-      class="mt-[25%] mb-10 w-2/3 rounded-xl bg-pop-primary/80 dark:bg-pop-secondary/50"
+      class="mt-36 mb-10 w-2/5 rounded-md bg-pop-primary/80 dark:bg-pop-secondary/50"
     />
     <LoginButton />
 
