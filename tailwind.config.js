@@ -27,15 +27,15 @@ module.exports = {
     createThemes(
       {
         light: {
-          primary: twColors.orange["50"], // '#e6ddda'
-          secondary: twColors.zinc["500"],
-          "pop-primary": twColors.rose["500"],
-          "pop-secondary": twColors.lime["900"], // "#233319"
+          primary: twColors.lime["50"], 
+          secondary: twColors.zinc["600"],
+          "pop-primary": twColors.orange["600"],
+          "pop-secondary": twColors.emerald["700"],
         },
         dark: {
-          primary: twColors.slate["800"],
-          secondary: twColors.zinc["600"],
-          "pop-primary": twColors.rose["500"],
+          primary: twColors.slate["900"],
+          secondary: twColors.zinc["300"],
+          "pop-primary": twColors.orange["500"],
           "pop-secondary": twColors.emerald["400"],
         },
       },

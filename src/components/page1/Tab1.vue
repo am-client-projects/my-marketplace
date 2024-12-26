@@ -30,7 +30,7 @@ defineProps<{
 const stats = [
   { name: "Total Users", stat: "54" },
   { name: "Removed Users", stat: "3" },
-  { name: "Navigators", stat: "17" },
-  { name: "Experts", stat: "6" },
+  { name: "Vendors", stat: "17" },
+  { name: "Buyers", stat: "6" },
 ];
 </script>

@@ -2,7 +2,7 @@
   <div
     class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-pop-secondary bg-primary px-2"
   >
-    <div class="flex m-2 shrink-0 justify-center">
+    <div class="flex m-4 shrink-0 justify-left">
       <img
         src="/logo.png"
         alt="logo"
@@ -10,10 +10,9 @@
       />
 
       <span
-        class="border-b border-pop-secondary text-pop-secondary mt-2 ml-4 italic"
+        class="border-b border-pop-secondary text-pop-secondary mt-8 ml-4 italic font-mono"
       >
-        The
-        <p>Marketplace</p>
+        The Marketplace
       </span>
     </div>
 

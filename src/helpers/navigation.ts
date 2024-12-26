@@ -41,11 +41,11 @@ export const primary_navigation: Item[] = [
   },
   {
     page: "Page2",
-    name: "Navigator Management",
-    description: "Manage navigators, check their expertise and client list",
+    name: "Vendor Management",
+    description: "Manage vendors, check their expertise and product/service list",
     icon: "fa-solid fa-user-shield", // user-gear, user-secret
     current: false,
-    roles: [AllRoles.SUPER_ADMIN, AllRoles.NAVIGATOR],
+    roles: [AllRoles.SUPER_ADMIN, AllRoles.VENDOR],
     items: [
       {
         page: "Tab1",
@@ -76,7 +76,7 @@ export const primary_navigation: Item[] = [
     description: "Manage your community, find people to chat with or mentor",
     icon: "fa-solid fa-users", // users-rectangle
     current: false,
-    roles: [AllRoles.SUPER_ADMIN, AllRoles.NAVIGATOR],
+    roles: [AllRoles.SUPER_ADMIN, AllRoles.CONSUMER],
     items: [
       {
         page: "Tab1",
@@ -100,7 +100,7 @@ export const primary_navigation: Item[] = [
     description: "Manage events, schedule and invite people",
     icon: "fa-solid fa-calendar-plus",
     current: false,
-    roles: [AllRoles.SUPER_ADMIN, AllRoles.NAVIGATOR],
+    roles: [AllRoles.SUPER_ADMIN, AllRoles.VENDOR],
     items: [
       {
         page: "Tab1",
@@ -138,7 +138,7 @@ export const primary_navigation: Item[] = [
     description: "Manage users, check their roles and connections",
     icon: "fa-solid fa-server",
     current: false,
-    roles: [AllRoles.SUPER_ADMIN, AllRoles.NAVIGATOR],
+    roles: [AllRoles.SUPER_ADMIN, AllRoles.ADMIN, AllRoles.VENDOR],
     items: [
       {
         page: "Tab1",
@@ -171,9 +171,8 @@ export const primary_navigation: Item[] = [
     current: false,
     roles: [
       AllRoles.SUPER_ADMIN,
-      AllRoles.NAVIGATOR,
-      AllRoles.PROFESSIONAL,
-      AllRoles.CLIENT,
+      AllRoles.VENDOR,
+      AllRoles.CONSUMER,
     ],
     items: [
       {
@@ -200,9 +199,8 @@ export const primary_navigation: Item[] = [
     current: false,
     roles: [
       AllRoles.SUPER_ADMIN,
-      AllRoles.NAVIGATOR,
-      AllRoles.PROFESSIONAL,
-      AllRoles.CLIENT,
+      AllRoles.VENDOR,
+      AllRoles.CONSUMER,
     ],
     items: [
       {
@@ -226,9 +224,8 @@ export const secondary_navigation = [
     current: false,
     roles: [
       AllRoles.SUPER_ADMIN,
-      AllRoles.NAVIGATOR,
-      AllRoles.PROFESSIONAL,
-      AllRoles.CLIENT,
+      AllRoles.VENDOR,
+      AllRoles.CONSUMER,
     ],
     items: [
       {
@@ -263,9 +260,8 @@ export const secondary_navigation = [
     current: false,
     roles: [
       AllRoles.SUPER_ADMIN,
-      AllRoles.NAVIGATOR,
-      AllRoles.PROFESSIONAL,
-      AllRoles.CLIENT,
+      AllRoles.VENDOR,
+      AllRoles.CONSUMER,
     ],
     items: [
       {
@@ -304,7 +300,7 @@ export const secondary_navigation = [
     description: "Manage navigators, check their expertise and client list",
     icon: "fa-solid fa-user-slash", // user-xmark, user-minus, user-lock, user-slash
     current: false,
-    roles: [AllRoles.SUPER_ADMIN, AllRoles.NAVIGATOR],
+    roles: [AllRoles.SUPER_ADMIN, AllRoles.VENDOR],
     items: [
       {
         page: "Tab1",

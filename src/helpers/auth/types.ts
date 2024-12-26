@@ -8,10 +8,6 @@ export enum SpecialRoles {
 }
 
 export enum GeneralRoles {
-  NAVIGATOR = "Navigator",
-  PROFESSIONAL = "Professional",
-  CLIENT = "Client",
-  // TODO
   ADMIN = "Admin",
   VENDOR = "Vendor",
   CONSUMER = "Consumer",
@@ -25,9 +21,9 @@ export const AllRoles = {
 };
 
 export enum RoleIds {
-  NAVIGATOR = "rol_hirVx22Zj98EeNwv",
-  PROFESSIONAL = "rol_9w8jnzrL4cMqVSrq",
-  CLIENT = "rol_Zwu3V1obnMymWZFF",
+  VENDOR = "rol_hirVx22Zj98EeNwv",
+  ADMIN = "rol_9w8jnzrL4cMqVSrq",
+  CONSUMER = "rol_Zwu3V1obnMymWZFF",
 }
 
 export interface ICreateUser {
