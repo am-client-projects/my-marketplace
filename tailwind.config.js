@@ -27,7 +27,7 @@ module.exports = {
     createThemes(
       {
         light: {
-          primary: twColors.lime["50"], 
+          primary: twColors.lime["50"],
           secondary: twColors.zinc["600"],
           "pop-primary": twColors.orange["600"],
           "pop-secondary": twColors.emerald["700"],

@@ -17,7 +17,7 @@
 
 # Notifications (Knock)
 
-# Users and RBAC (Auth0, FreeEgg??, Supabase???)
+# Users and RBAC (Auth0, Frontegg?, Supabase???)
 
 ## Frontegg
 
@@ -44,7 +44,7 @@
 - https://www.digitalocean.com/community/tutorials/how-to-build-a-shopping-cart-with-vue-3-and-vuex
 - https://github.com/wobsoriano/vue-cart?tab=readme-ov-file
 - https://www.youtube.com/watch?v=ZsPN5NaB-CE
-  - https://github.com/belasriimad/vuejs_shopping_cart
+- https://github.com/belasriimad/vuejs_shopping_cart
 
 > > > BE CareFull (fishy looking)
 
